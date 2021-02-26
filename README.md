@@ -20,24 +20,4 @@ OS: Ubuntu 18.04 using VirtualBox
 
 # seconds.c file
 
-```c
-static struct file_operations proc_ops = {
-    .owner = THIS_MODULE,
-    .read = proc_read,
-};
 
-static ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, loff_t *pos)
-{
-    char buffer[BUFFER_SIZE];
-    int rv = 0;
-    static int completed = 0;
-    if (completed) {
-        completed = 0;
-        return 0;
-    }
-    completed = 1;
-    rv = sprintf(buffer, "Current value of jiffies: %lu\n", jiffies);
-    raw_copy_to_user(usr_buf, buffer, rv);
-    return rv;
-}
-```
