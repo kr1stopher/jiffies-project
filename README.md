@@ -32,4 +32,5 @@ Jiffies Output:
 ![Jiffies Output](https://raw.githubusercontent.com/kr1stopher/images/main/Screenshot%20from%202021-02-26%2012-20-09.png)
 
 Seconds Output:
+
 ![Jiffies Output](https://raw.githubusercontent.com/kr1stopher/images/main/Screenshot%20from%202021-02-26%2012-58-54.png)
